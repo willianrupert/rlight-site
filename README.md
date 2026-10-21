@@ -19,5 +19,11 @@ com o servidor local no ar:
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --window-size=1200,630 --screenshot=assets/og.png http://localhost:8766/assets/og-fonte.html
 ```
 
-A marca mora em `assets/marca/`: `icone.svg` (o Traço), `app.svg` (ícone de app)
-e `app-quadrado.svg` (base do `apple-touch-icon.png`, sem cantos, que o iOS arredonda).
+A marca mora em `assets/marca/`. O símbolo se simplifica conforme encolhe:
+
+- `brilho.svg`: o R com o LED irradiando, para tamanhos grandes (imagem de
+  compartilhamento, ícone de app, avatar).
+- `icone.svg`: o mesmo R só com o pad aceso, para tamanhos pequenos (cabeçalho,
+  rodapé, favicon).
+- `app.svg` e `app-quadrado.svg`: o Brilho sobre grafite; o quadrado, sem cantos,
+  é a base do `apple-touch-icon.png`, que o iOS arredonda sozinho.

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- RLight · Brilho: o Traço com o pad aceso irradiando. Para tamanhos grandes; pequeno, use icone.svg. -->
+  <path d="M10 38V8h13l6 6v5l-6 6H10M20 25l8 8" fill="none" stroke="#1d1d1f" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="31.5" cy="36" r="3.4" fill="#30d158"/>
+  <path d="M37.7 36h3M35.9 40.4l2.1 2.1M31.5 42.2v3M27.1 40.4l-2.1 2.1M35.9 31.6l2.1-2.1" fill="none" stroke="#30d158" stroke-width="2.2" stroke-linecap="round"/>
+</svg>
