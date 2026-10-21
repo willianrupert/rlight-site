@@ -12,5 +12,12 @@ Para ver localmente:
 python3 -m http.server 8766
 ```
 
-`assets/og.png` é gerado a partir de `assets/og-fonte.svg` com o Chrome headless
-(1200 × 630).
+`assets/og.png` é gerado a partir de `assets/og-fonte.html` com o Chrome headless,
+com o servidor local no ar:
+
+```bash
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --window-size=1200,630 --screenshot=assets/og.png http://localhost:8766/assets/og-fonte.html
+```
+
+A marca mora em `assets/marca/`: `icone.svg` (o Traço), `app.svg` (ícone de app)
+e `app-quadrado.svg` (base do `apple-touch-icon.png`, sem cantos, que o iOS arredonda).

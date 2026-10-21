@@ -91,12 +91,20 @@ button { font: inherit; color: inherit; }
   padding: 0 var(--margem-d) 0 var(--margem);
   display: flex; align-items: center; gap: 28px;
 }
-.marca { display: flex; align-items: center; gap: 10px; color: var(--texto); font-weight: 650; font-size: 18px; letter-spacing: -0.02em; }
+.marca { display: flex; align-items: center; gap: 4px; color: var(--texto); font-weight: 650; font-size: 18px; letter-spacing: -0.02em; }
 .marca:hover { text-decoration: none; }
-.marca svg { width: 28px; height: 28px; }
-.marca-chip { fill: var(--texto); }
-.marca-r { fill: none; stroke: var(--fundo); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
-.marca-led { fill: var(--verde); }
+.marca svg { width: 32px; height: 32px; margin: 0 -4px 0 -5px; }
+.marca-traco { fill: none; stroke: var(--texto); stroke-width: 3.6; stroke-linecap: round; stroke-linejoin: round; }
+.marca-pad { fill: var(--verde); transition: filter .3s; }
+.marca:hover .marca-pad { filter: drop-shadow(0 0 4px var(--verde)); }
+/* O nome: minúsculas, e o pingo do i é um LED aceso. */
+.nome { font: 650 22px/1 var(--display); letter-spacing: -0.04em; }
+.nome .i { position: relative; }
+.nome .i i { position: absolute; left: 50%; top: .19em; width: .19em; height: .19em; margin-left: -.095em; border-radius: 50%; background: var(--verde); box-shadow: 0 0 .25em color-mix(in srgb, var(--verde) 70%, transparent); animation: respira 4s ease-in-out infinite; }
+@keyframes respira { 0%, 100% { opacity: .82 } 50% { opacity: 1 } }
+.rodape-marca { display: inline-flex; align-items: center; justify-content: center; gap: 6px; color: var(--texto); margin-bottom: 6px; }
+.rodape-marca svg { width: 26px; height: 26px; }
+.rodape-marca .nome { font-size: 19px; }
 .menu { display: flex; gap: 24px; list-style: none; margin: 0 0 0 auto; padding: 0; }
 .menu a { color: var(--suave); font-size: 14px; font-weight: 500; }
 .menu a:hover { color: var(--texto); text-decoration: none; }

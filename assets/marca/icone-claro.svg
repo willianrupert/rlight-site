@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- RLight · Traço: o R como trilha de placa, terminando num pad aceso. -->
+  <path d="M13 39V9h13l6 6v5l-6 6H13M23 26l8.5 8.5" fill="none" stroke="#f5f5f7" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="34.2" cy="37.2" r="3.3" fill="#30d158"/>
+</svg>
