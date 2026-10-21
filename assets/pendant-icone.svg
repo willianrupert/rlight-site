@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#11306a"/><stop offset="1" stop-color="#071530"/>
+  </linearGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#c9d3e2"/><stop offset="0.35" stop-color="#ffffff"/><stop offset="1" stop-color="#aab6c8"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#9cc4ff" stop-opacity="0.75"/><stop offset="1" stop-color="#7fb0ff" stop-opacity="0"/>
+  </radialGradient>
+  <clipPath id="body"><path d="M422 440 H602 V752 Q602 780 574 790 L530.0 806 Q512.0 812 494.0 806 L450 790 Q422 780 422 752 Z"/></clipPath>
+</defs>
+<rect width="1024" height="1024" fill="url(#bg)"/>
+<g transform="translate(0.0 0.0) scale(1.0)">
+  <ellipse cx="512" cy="830" rx="260" ry="70" fill="url(#glow)"/>
+  <rect x="232" y="822" width="560" height="18" rx="9" fill="#7fb0ff"/>
+  <rect x="422" y="150" width="180" height="300" rx="34" fill="url(#metal)"/>
+  <rect x="422" y="418" width="180" height="22" fill="#9aa7bb"/>
+  <g clip-path="url(#body)">
+    <rect x="422" y="440" width="180" height="380" fill="url(#metal)"/>
+    <path d="M422 504 L602 458 L602 482 L422 528 Z" fill="#0a1d42" opacity="0.92"/><path d="M422 566 L602 520 L602 544 L422 590 Z" fill="#0a1d42" opacity="0.92"/><path d="M422 628 L602 582 L602 606 L422 652 Z" fill="#0a1d42" opacity="0.92"/><path d="M422 690 L602 644 L602 668 L422 714 Z" fill="#0a1d42" opacity="0.92"/><path d="M422 752 L602 706 L602 730 L422 776 Z" fill="#0a1d42" opacity="0.92"/>
+  </g>
+</g>
+</svg>

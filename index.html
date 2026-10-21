@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#fbfbfd" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)">
+<title>RLight · Estúdio de engenharia</title>
+<meta name="description" content="RLight é o estúdio de engenharia de Willian Rupert: firmware, apps e dados para sistemas que precisam funcionar fora do laboratório.">
+<meta property="og:title" content="RLight · Do silício a quem usa.">
+<meta property="og:description" content="Estúdio de engenharia de Willian Rupert. Firmware, apps e dados para sistemas que precisam funcionar fora do laboratório.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rlight.com.br/">
+<meta property="og:image" content="https://rlight.com.br/assets/og.png">
+<link rel="icon" href="assets/marca.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="estilo.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="app.js" defer></script>
+</head>
+<body>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="barra">
+  <nav class="barra-dentro" aria-label="Principal">
+    <a class="marca" href="#topo" aria-label="RLight, início">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="3" width="26" height="26" rx="8" class="marca-chip"/><path d="M11 22V10h5.5a3.5 3.5 0 0 1 0 7H11m5 0 5 5" class="marca-r"/><circle cx="24" cy="8" r="2.2" class="marca-led"/></svg>
+      <span>RLight</span>
+    </a>
+    <ul class="menu">
+      <li><a href="#sistemas">Sistemas</a></li>
+      <li><a href="#mapa">Mapa</a></li>
+      <li><a href="#notas">Notas</a></li>
+    </ul>
+    <a class="botao botao-pequeno" href="#contato">Conversar</a>
+  </nav>
+</header>
+
+<main id="conteudo">
+
+<!-- ============================================================ capa -->
+<section class="capa" id="topo">
+  <div class="capa-texto">
+    <p class="sobretitulo revela">Estúdio de engenharia · Recife</p>
+    <h1 class="revela">Do silício<br><span class="gradiente">a quem usa.</span></h1>
+    <p class="lede revela">Sou <strong>Willian Rupert</strong>. Construo sistemas inteiros, do firmware no ESP32 ao app no bolso de quem usa, para problemas que precisam funcionar fora do laboratório: numa sala de aula, numa oficina, na porta de casa.</p>
+    <div class="acoes revela">
+      <a class="botao" href="#sistemas">Ver os sistemas</a>
+      <a class="botao botao-fantasma" href="#contato">Tenho um problema assim</a>
+    </div>
+  </div>
+
+  <div class="circuito revela" aria-hidden="true">
+    <svg viewBox="0 0 520 440" id="circuito">
+      <defs>
+        <radialGradient id="brilho"><stop offset="0" class="brilho-a"/><stop offset="1" class="brilho-b"/></radialGradient>
+        <pattern id="pontos" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" class="ponto"/></pattern>
+      </defs>
+      <rect width="520" height="440" fill="url(#pontos)" class="grade"/>
+      <circle id="luz" cx="260" cy="220" r="170" fill="url(#brilho)"/>
+      <g class="trilhas">
+        <path d="M185 180H130l-30-30H60"/>
+        <path d="M185 260H120l-35 35H60"/>
+        <path d="M335 180h55l30-30h40"/>
+        <path d="M335 260h65l35 35h25"/>
+        <path d="M260 145V95l30-30h40"/>
+        <path d="M260 295v50l-30 30h-40"/>
+      </g>
+      <g class="pulsos">
+        <path d="M185 180H130l-30-30H60" style="--d:0s"/>
+        <path d="M185 260H120l-35 35H60" style="--d:.9s"/>
+        <path d="M335 180h55l30-30h40" style="--d:.4s"/>
+        <path d="M335 260h65l35 35h25" style="--d:1.4s"/>
+        <path d="M260 145V95l30-30h40" style="--d:.2s"/>
+        <path d="M260 295v50l-30 30h-40" style="--d:1.1s"/>
+      </g>
+      <g class="nos">
+        <circle cx="60" cy="150" r="5"/><circle cx="60" cy="295" r="5"/><circle cx="460" cy="150" r="5"/>
+        <circle cx="460" cy="295" r="5"/><circle cx="330" cy="65" r="5"/><circle cx="190" cy="375" r="5"/>
+      </g>
+      <g class="rotulos">
+        <text x="48" y="136" text-anchor="start">firmware</text>
+        <text x="48" y="320" text-anchor="start">sensores</text>
+        <text x="472" y="136" text-anchor="end">web</text>
+        <text x="472" y="320" text-anchor="end">dados</text>
+        <text x="342" y="69">gente</text>
+        <text x="178" y="379" text-anchor="end">energia</text>
+      </g>
+      <g class="pinos">
+        <path d="M205 145v-10M223 145v-10M241 145v-10M259 145v-10M277 145v-10M295 145v-10M313 145v-10"/>
+        <path d="M205 305v-10M223 305v-10M241 305v-10M259 305v-10M277 305v-10M295 305v-10M313 305v-10"/>
+      </g>
+      <g id="chip" class="chip" role="button" tabindex="-1">
+        <rect x="185" y="145" width="150" height="150" rx="20" class="chip-corpo"/>
+        <rect x="205" y="165" width="110" height="110" rx="11" class="chip-miolo"/>
+        <text x="260" y="224" text-anchor="middle" class="chip-nome">ESP32</text>
+        <text x="260" y="246" text-anchor="middle" class="chip-sub">toque aqui</text>
+        <circle cx="317" cy="163" r="4.5" class="led"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ============================================================ números -->
+<section class="numeros" aria-label="Em números">
+  <dl>
+    <div class="revela"><dt>sistemas em produção</dt><dd>4</dd></div>
+    <div class="revela"><dt>testes automatizados</dt><dd>2.300+</dd></div>
+    <div class="revela"><dt>portas abertas no roteador</dt><dd>0</dd></div>
+    <div class="revela"><dt>bytes que o Adsum manda para a rede</dt><dd>0</dd></div>
+  </dl>
+</section>
+
+<!-- ============================================================ sistemas -->
+<section class="secao" id="sistemas">
+  <header class="secao-cabeca revela">
+    <p class="sobretitulo">Em produção</p>
+    <h2>Quatro sistemas que outras pessoas usam todos os dias.</h2>
+    <p class="lede">Cada um resolve um problema concreto, e cada um foi desenhado para falhar com aviso, nunca em silêncio. Experimente, aqui mesmo.</p>
+  </header>
+
+  <!-- ---------------- Adsum -->
+  <article class="sistema" id="adsum">
+    <div class="sistema-texto revela">
+      <p class="selo"><span class="bolinha"></span>em uso no CIn-UFPE</p>
+      <h3>Adsum</h3>
+      <p class="sistema-lema">Chamada por crachá. Sem servidor, sem conta, sem login.</p>
+      <p>O aluno encosta o crachá, a presença é registrada, e no fim da aula a planilha já está pronta para o SIGAA. Feito com o Prof. Paulo Freitas para o Centro de Informática da UFPE.</p>
+      <ul class="pontos">
+        <li><strong>A pasta é a dona dos dados.</strong> O navegador é só cache; limpar o site não apaga a turma.</li>
+        <li><strong>O leitor é um teclado.</strong> O app separa a rajada da máquina da digitação humana pelo ritmo das teclas.</li>
+        <li><strong>Aguenta a fila mais rápida que a sala.</strong> 300 crachás em rajada, nenhum perdido no disco.</li>
+      </ul>
+      <p class="rodape-sistema"><span>PWA offline · React · TypeScript · 1000+ testes</span></p>
+      <p class="links"><a href="https://willianrupert.github.io/adsum/">Abrir o app ↗</a><a href="https://github.com/willianrupert/adsum">Código ↗</a></p>
+    </div>
+
+    <div class="demo demo-adsum revela" aria-label="Demonstração: encoste o crachá no leitor">
+      <div class="demo-palco">
+        <div class="leitor" id="leitor">
+          <div class="leitor-onda"></div>
+          <div class="leitor-luz"></div>
+          <span>leitor</span>
+        </div>
+        <button class="cracha" id="cracha" type="button" aria-label="Encostar crachá no leitor">
+          <span class="cracha-furo"></span>
+          <span class="cracha-foto"></span>
+          <span class="cracha-nome" id="cracha-nome">Ana Beatriz</span>
+          <span class="cracha-linha"></span>
+        </button>
+      </div>
+      <p class="demo-dica"><span class="so-toque">Arraste o crachá até o leitor, ou toque nele.</span><span class="so-mouse">Arraste o crachá até o leitor, ou clique nele.</span></p>
+      <div class="chamada">
+        <div class="chamada-cabeca"><span>Presentes</span><strong id="presentes">0</strong><span class="de">de 48</span></div>
+        <ol id="lista" aria-live="polite"></ol>
+        <p class="planilha" id="planilha" hidden>faltas.csv atualizado agora</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- ---------------- Pendant -->
+  <article class="sistema invertido" id="pendant">
+    <div class="sistema-texto revela">
+      <p class="selo"><span class="bolinha"></span>na oficina, todo dia</p>
+      <h3>RLight Pendant</h3>
+      <p class="sistema-lema">A sua CNC, ao vivo, na palma da mão.</p>
+      <p>Interfaces de CNC costumam ser painéis com todo parâmetro na tela e todo erro em código. O Pendant decide o que importa agora e esconde o resto atrás de bons padrões. Um app web servido na rede da oficina, para iPhone e Android, sem loja.</p>
+      <ul class="pontos">
+        <li><strong>Uma régua em vez de botões.</strong> Arraste e a máquina acompanha o dedo; um peteleco segue por inércia.</li>
+        <li><strong>Uma conexão honesta.</strong> Todo movimento é uma intenção completa: se o celular some, a máquina termina ou para.</li>
+        <li><strong>Nenhum valor de máquina no código.</strong> Curso, limites e spindle vêm da própria placa.</li>
+      </ul>
+      <p class="rodape-sistema"><span>PWA · TypeScript estrito · FluidNC · 500+ testes</span></p>
+      <p class="links"><a href="https://willianrupert.github.io/rlight-pendant/">Experimentar a demo ↗</a><a href="https://github.com/willianrupert/rlight-pendant">Código ↗</a></p>
+    </div>
+
+    <div class="demo demo-pendant revela">
+      <div class="carrossel" id="carrossel" tabindex="0" aria-label="Telas do RLight Pendant, deslize para o lado">
+        <figure><img src="assets/pendant-01-assistir.jpg" width="640" height="1385" loading="lazy" decoding="async" alt="Tela de acompanhar a máquina andando"><figcaption>Assistir</figcaption></figure>
+        <figure><img src="assets/pendant-02-controle.jpg" width="640" height="1385" loading="lazy" decoding="async" alt="Tela de controle com a régua de jog"><figcaption>A régua</figcaption></figure>
+        <figure><img src="assets/pendant-03-fantasma.jpg" width="640" height="1385" loading="lazy" decoding="async" alt="Mapa da mesa com o destino fantasma e o botão Ir"><figcaption>Toque na mesa e "Ir"</figcaption></figure>
+        <figure><img src="assets/pendant-04-spindle.jpg" width="640" height="1385" loading="lazy" decoding="async" alt="Mostrador do spindle subindo pela rampa real"><figcaption>O spindle</figcaption></figure>
+      </div>
+      <div class="pontinhos" id="pontinhos" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    </div>
+  </article>
+
+  <!-- ---------------- Portaria -->
+  <article class="sistema" id="portaria">
+    <div class="sistema-texto revela">
+      <p class="selo"><span class="bolinha"></span>em produção desde jul/2026</p>
+      <h3>Portaria</h3>
+      <p class="sistema-lema">Encomendas recebidas sem porteiro.</p>
+      <p>Uma casa com duas portas em série. O entregador digita o código da etiqueta, deixa o pacote e sai; a casa pesa, fotografa, registra e avisa quem mora lá.</p>
+      <ul class="pontos">
+        <li><strong>O hardware sente, o software decide.</strong> O ESP32-S3 só lê sensores e aciona travas; a lógica é Python, coberta por testes.</li>
+        <li><strong>Nenhuma entrega se perde por falta de internet.</strong> Tudo é gravado em casa primeiro e sobe por uma fila com confirmação.</li>
+        <li><strong>Interlock.</strong> A porta de casa nunca abre com a da rua aberta.</li>
+      </ul>
+      <p class="rodape-sistema"><span>ESP32-S3 · Python · FastAPI · Node · 800+ testes</span></p>
+      <p class="links"><span class="privado">Código privado</span></p>
+    </div>
+
+    <div class="demo demo-portaria revela">
+      <ol class="passos" id="passos">
+        <li class="passo"><span class="passo-num">1</span><div><strong>Código</strong><p>O entregador digita os 4 dígitos da transportadora.</p></div></li>
+        <li class="passo"><span class="passo-num">2</span><div><strong>Porta da rua</strong><p>Abre. A de casa continua trancada.</p></div></li>
+        <li class="passo"><span class="passo-num">3</span><div><strong>Balança</strong><p>O pacote é pesado e fotografado.</p></div></li>
+        <li class="passo"><span class="passo-num">4</span><div><strong>Gravado em casa</strong><p>Antes de qualquer nuvem, com foto.</p></div></li>
+        <li class="passo"><span class="passo-num">5</span><div><strong>Aviso</strong><p>Quem mora recebe a foto da entrega no celular.</p></div></li>
+      </ol>
+      <div class="notificacao" id="notificacao" aria-hidden="true">
+        <div class="notificacao-icone"></div>
+        <div><strong>Portaria</strong><span>Entrega recebida · 1,2 kg · agora</span></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ---------------- Caixa d'água -->
+  <article class="sistema invertido" id="caixa">
+    <div class="sistema-texto revela">
+      <p class="selo"><span class="bolinha"></span>em produção</p>
+      <h3>Caixa d'água</h3>
+      <p class="sistema-lema">Um tanque de guerra com um botão só.</p>
+      <p>Controla o bombeamento da cisterna para a caixa. A segurança roda inteira no ESP32: Wi-Fi e Home Assistant são só telemetria. Se a rede cair, o sistema nem percebe.</p>
+      <ul class="pontos">
+        <li><strong>Dez estados, persistidos em flash.</strong> Depois de um apagão, nada religa sem passar pelo boot seguro.</li>
+        <li><strong>Corrente fantasma.</strong> Relé desligado e corrente no motor é contator soldado, e vira alarme.</li>
+        <li><strong>Falhas exigem uma pessoa.</strong> Rotor preso ou bomba a seco só destravam com um toque humano.</li>
+      </ul>
+      <p class="rodape-sistema"><span>ESP32 · ESPHome · Home Assistant</span></p>
+      <p class="links"><a href="https://github.com/willianrupert/caixa-dagua-esphome">Código ↗</a></p>
+    </div>
+
+    <div class="demo demo-caixa revela">
+      <div class="caixa-palco">
+        <div class="tanque" aria-hidden="true"><div class="agua" id="agua"><svg viewBox="0 0 200 20" preserveAspectRatio="none"><path d="M0 10 Q25 0 50 10 T100 10 T150 10 T200 10 V20 H0Z"/></svg></div><span class="tanque-boia"></span></div>
+        <button class="botao-inox" id="inox" type="button" aria-describedby="estado-desc">
+          <span class="anel" id="anel"></span>
+          <span class="inox-face"></span>
+          <span class="visualmente-oculto">Botão da caixa d'água</span>
+        </button>
+      </div>
+      <div class="estado" aria-live="polite">
+        <p class="estado-codigo" id="estado-codigo">E0</p>
+        <p class="estado-nome" id="estado-nome">Standby</p>
+        <p class="estado-desc" id="estado-desc">LED apagado: tudo certo. Toque para encher; segure para pausar.</p>
+      </div>
+      <div class="falhas" role="group" aria-label="Simular uma falha">
+        <span>Simular:</span>
+        <button type="button" data-falha="E6">rotor preso</button>
+        <button type="button" data-falha="E7">bomba a seco</button>
+        <button type="button" data-falha="E5">contator soldado</button>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ============================================================ mapa -->
+<section class="secao secao-escura" id="mapa">
+  <header class="secao-cabeca revela">
+    <p class="sobretitulo">Infraestrutura</p>
+    <h2>Uma casa que não abre nenhuma porta para a internet.</h2>
+    <p class="lede">Tudo o que roda em casa entra por um túnel, é protegido por um nobreak próprio e tem cópia fora dali. Toque em qualquer bloco.</p>
+  </header>
+
+  <div class="mapa revela">
+    <div class="mapa-rolo" tabindex="0" aria-label="Mapa da infraestrutura; deslize para os lados no celular">
+    <svg viewBox="0 0 960 560" id="mapa-svg" role="group" aria-label="Mapa da infraestrutura RLight">
+      <g class="regioes">
+        <rect x="20" y="150" width="620" height="390" rx="26"/><text x="44" y="182">Casa</text>
+        <rect x="680" y="150" width="260" height="250" rx="26"/><text x="704" y="182">Oracle Cloud</text><text x="555" y="236" text-anchor="middle" class="rotulo-linha">backup via Tailscale</text>
+      </g>
+      <g class="ligacoes">
+        <path d="M330 70 V110 H330 V130" class="fluxo"/>
+        <path d="M330 130 V 220" class="fluxo"/>
+        <path d="M330 255 V 300" class="fluxo"/>
+        <path d="M160 320 H 260"/>
+        <path d="M400 320 H 500"/>
+        <path d="M330 345 V 400"/>
+        <path d="M260 430 L 170 460"/>
+        <path d="M400 430 L 490 460"/>
+        <path d="M110 345 V 480"/>
+        <path d="M385 295 C 430 240, 640 240, 720 318" class="fluxo tracejado"/>
+        <path d="M810 250 V 300"/>
+        <path d="M330 450 V 470"/>
+      </g>
+      <g class="nos-mapa">
+        <g class="no" data-no="internet" tabindex="0" role="button"><rect x="260" y="40" width="140" height="44" rx="22"/><text x="330" y="68">Internet</text></g>
+        <g class="no" data-no="tunel" tabindex="0" role="button"><rect x="235" y="210" width="190" height="50" rx="14"/><text x="330" y="240">Cloudflare Tunnel</text></g>
+        <g class="no destaque" data-no="proxmox" tabindex="0" role="button"><rect x="260" y="295" width="140" height="50" rx="14"/><text x="330" y="325">Proxmox</text></g>
+        <g class="no" data-no="nobreak" tabindex="0" role="button"><rect x="60" y="295" width="110" height="50" rx="14"/><text x="115" y="325">Nobreak</text></g>
+        <g class="no" data-no="facial" tabindex="0" role="button"><rect x="500" y="295" width="120" height="50" rx="14"/><text x="560" y="318">Câmeras</text><text x="560" y="334" class="sub">e rostos</text></g>
+        <g class="no destaque" data-no="ha" tabindex="0" role="button"><rect x="240" y="400" width="180" height="50" rx="14"/><text x="330" y="430">Home Assistant</text></g>
+        <g class="no" data-no="caixa" tabindex="0" role="button"><rect x="60" y="460" width="130" height="50" rx="14"/><text x="125" y="490">Caixa d'água</text></g>
+        <g class="no" data-no="ph" tabindex="0" role="button"><rect x="260" y="470" width="140" height="50" rx="14"/><text x="330" y="500">pH e ORP</text></g>
+        <g class="no" data-no="solar" tabindex="0" role="button"><rect x="470" y="460" width="150" height="50" rx="14"/><text x="545" y="490">Gerador solar</text></g>
+        <g class="no" data-no="ampere" tabindex="0" role="button"><rect x="720" y="200" width="180" height="50" rx="14"/><text x="810" y="230">Ampere ARM</text></g>
+        <g class="no destaque" data-no="pbs" tabindex="0" role="button"><rect x="720" y="300" width="180" height="56" rx="14"/><text x="810" y="324">Proxmox Backup</text><text x="810" y="342" class="sub">cópia fora de casa</text></g>
+      </g>
+    </svg>
+    </div>
+    <p class="mapa-dica">Deslize para ver o mapa inteiro.</p>
+    <aside class="painel" id="painel" aria-live="polite">
+      <p class="painel-tag" id="painel-tag">Toque em um bloco</p>
+      <h3 id="painel-titulo">O mapa da casa</h3>
+      <p id="painel-texto">Cada bloco é uma peça real, em uso. Escolha um para ver o que ele faz e por que foi desenhado assim.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ============================================================ princípios -->
+<section class="secao" id="principios">
+  <header class="secao-cabeca revela">
+    <p class="sobretitulo">Como eu trabalho</p>
+    <h2>Quatro regras que aparecem em todo projeto.</h2>
+  </header>
+  <ul class="principios">
+    <li class="revela"><span class="principio-num">01</span><h3>O hardware sente, o software decide.</h3><p>Microcontroladores fazem pouco e fazem sempre. A inteligência mora onde dá para testar.</p></li>
+    <li class="revela"><span class="principio-num">02</span><h3>Nenhuma falha é silenciosa.</h3><p>Se algo não deu certo, a tela diz o quê, onde e há quanto tempo. Silêncio é o pior defeito.</p></li>
+    <li class="revela"><span class="principio-num">03</span><h3>Testado no mundo, não só no código.</h3><p>Teste de unidade prova coerência. Hardware de verdade, sala de verdade e apagão de verdade provam o resto.</p></li>
+    <li class="revela"><span class="principio-num">04</span><h3>O simples é belo.</h3><p>Antes de acrescentar, pergunto o que dá para tirar. Quem usa não deveria ter que pensar no sistema.</p></li>
+  </ul>
+</section>
+
+<!-- ============================================================ notas -->
+<section class="secao" id="notas">
+  <header class="secao-cabeca revela">
+    <p class="sobretitulo">Notas de campo</p>
+    <h2>Problemas reais, e o que eles me ensinaram.</h2>
+  </header>
+
+  <div class="notas">
+    <details class="nota revela">
+      <summary><span class="nota-tag">Adsum · em sala de aula</span><span class="nota-titulo">O crachá que apitava e não aparecia</span><span class="nota-abre" aria-hidden="true"></span></summary>
+      <div class="nota-corpo">
+        <p>Numa turma grande, o professor relatou que o leitor apitava e nada acontecia na tela. Sem erro, sem aviso. A causa estava num detalhe de tempo: o intervalo entre teclas era medido quando o código <em>rodava</em>, não quando a tecla <em>chegava</em>. Com a tela ocupada redesenhando a lista, o atraso do navegador parecia digitação humana, e a rajada inteira era recusada em silêncio.</p>
+        <p>A correção foi medir pelo carimbo do próprio evento. A prova foi física: um ESP32-S3 se passando por teclado USB, digitando crachás no Chrome de verdade, simulou uma turma de 200 pessoas duas vezes. Todas as leituras chegaram. O mesmo rig confirmou que digitação humana continua sendo recusada.</p>
+        <p class="nota-licao">O que ficou: teste em ambiente simulado prova coerência; o caminho físico inteiro é o que prova o conserto.</p>
+      </div>
+    </details>
+
+    <details class="nota revela">
+      <summary><span class="nota-tag">pH e ORP · engenharia reversa</span><span class="nota-titulo">A mentira necessária</span><span class="nota-abre" aria-hidden="true"></span></summary>
+      <div class="nota-corpo">
+        <p>Um monitor de qualidade de água só funcionava pela nuvem do fabricante. Troquei o módulo Wi-Fi por um ESP32-C3 e passei a falar o protocolo serial dele direto. O microcontrolador interno respondia ao início da conversa e depois ficava em silêncio absoluto.</p>
+        <p>O que destravou: dizer a ele que estávamos <strong>conectados à nuvem</strong> (status <code>0x04</code>), e não só ao Wi-Fi. Junto disso, responder sempre com a versão <code>0x00</code> no cabeçalho, mandar um sinal de vida a cada 10 segundos e entregar a hora certa quando ele pede. Com isso, os oito sensores passaram a chegar sem parar, sem nuvem nenhuma.</p>
+        <p class="nota-licao">O que ficou: quando um sistema fica mudo, a pergunta não é o que está quebrado, mas o que ele está esperando ouvir.</p>
+      </div>
+    </details>
+
+    <details class="nota revela">
+      <summary><span class="nota-tag">Infraestrutura · Oracle Cloud</span><span class="nota-titulo">A cota que caiu pela metade</span><span class="nota-abre" aria-hidden="true"></span></summary>
+      <div class="nota-corpo">
+        <p>Praticamente todo tutorial diz que o plano gratuito da Oracle dá 4 núcleos ARM e 24 GB de memória. A própria documentação da casa dizia o mesmo. Medi na máquina: eram 2 núcleos e 12 GB, que hoje são o teto real do plano.</p>
+        <p>Ajustei a instância exatamente nesse limite. Pedir o que todo mundo diz que é grátis teria virado cobrança. Na mesma revisão, achei que a máquina não tinha saída para a internet por um motivo estrutural, e não por defeito; a saída passou a ser um túnel gerenciado pelo sistema, sem custo nenhum.</p>
+        <p class="nota-licao">O que ficou: número escrito não é número medido. Antes de decidir, eu confiro na máquina.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ============================================================ contato -->
+<section class="contato" id="contato">
+  <div class="contato-dentro revela">
+    <p class="sobretitulo">Contato</p>
+    <h2>Tem um problema que mistura coisa física com software?</h2>
+    <p class="lede">Me conta. Pode ser um protótipo, um sistema que já existe e precisa ficar confiável, ou só uma ideia que ainda não sabe o que é.</p>
+    <div class="acoes acoes-centro">
+      <a class="botao botao-grande" href="mailto:wnrj@cin.ufpe.br?subject=Projeto%20RLight">wnrj@cin.ufpe.br</a>
+    </div>
+    <p class="redes"><a href="https://www.linkedin.com/in/willianrupert">LinkedIn</a><a href="https://github.com/willianrupert">GitHub</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <p>RLight · estúdio de engenharia de Willian Rupert · Recife</p>
+  <p class="assinatura">o simples é belo.</p>
+</footer>
+
+</body>
+</html>
