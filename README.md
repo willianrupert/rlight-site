@@ -6,6 +6,13 @@ Estático: `index.html`, `estilo.css` e `app.js`, sem build e sem dependências.
 O tema segue o sistema (claro ou escuro). Toda interação é melhoria
 progressiva: sem JavaScript, a página continua legível de ponta a ponta.
 
+Antes de cada commit que mexa no CSS ou no JS, carimbe as versões, para
+ninguém receber o HTML novo com o CSS antigo do cache:
+
+```bash
+python3 ferramentas/versionar.py
+```
+
 Para ver localmente:
 
 ```bash
